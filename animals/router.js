@@ -10,7 +10,7 @@ const animals = [{
 }];
 
 //create object router
-const router = express.Router();
+const router = express.Router(); 
 
 /**
  * Responds with all animals
