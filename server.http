@@ -2,7 +2,7 @@ GET http://localhost:3000/api/animals/
 
 ###
 
-GET http://localhost:3000/api/animals/4
+GET http://localhost:3000/api/animals/0
 
 ###
 
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/animals/2
+DELETE http://localhost:3000/api/animals/6
 
 ###
 

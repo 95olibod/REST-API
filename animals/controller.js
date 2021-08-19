@@ -29,14 +29,14 @@ function getOneAnimal(req, res, next) {
     const { id } = req.params;
     const animal = animals.find(animal => animal.id == id);
     if (!animal) {
-    res.status(404).json('animal with id ${id} was not found.');
+    res.status(404).json(`A animal with id ${id} was not found.`);
     } else {
     res.status(200).json(animal);
     }
 }
 
 /**
- * 
+ * POST
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
@@ -48,7 +48,7 @@ function saveAnimal(req, res, next) {
 }
 
 /**
- * 
+ * PUT
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
@@ -56,30 +56,30 @@ function saveAnimal(req, res, next) {
 function updateAnimal(req, res, next) {
     const { id, name, animalType, otherInfo } = req.params;
     const animalIndex = animals.findIndex(animal => animal.id == id);
-    if(animalIndex){
+    const animal = animals.find(animal => animal.id == id);
+    if(animal){
         const clone = [ ...animals];
         clone[animalIndex] = { ...req.body, id: parseInt(id)};
         animals = clone;
         const animal = animals.find(animal => animal.id == id);
         res.status(200).json(animal);
     } else {   
-        res.status(404).json('animal with that id could not be found');
+        res.status(404).json(`A animal with id ${id} was not found.`);
     }
 }
 
 /**
- * 
+ * DELETE
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
  */
  function deleteAnimal(req, res, next) {
     const { id } = req.params;
-    const animalIndex = animals.findIndex(animal => animal.id == id);
-    if (!req.params.id) {
-    res.status(404).json('animal with id ${id} was not found.');
+    const animal = animals.find(animal => animal.id == id);
+    if (!animal) {
+    res.status(404).json(`A animal with id ${id} was not found.`);
     } else {
-        // animals.splice(animalIdIndex, 1);
         const updatedAnimals = animals.filter((animal) => animal.id != id);
         animals = updatedAnimals; 
     res.status(200).json(animals);
