@@ -2,3 +2,31 @@ GET http://localhost:3000/api/animals/
 
 ###
 
+GET http://localhost:3000/api/animals/4
+
+###
+
+POST http://localhost:3000/api/animals
+Content-Type: application/json
+
+{
+    "name": "myra",
+    "animalType": "hund",
+    "otherInfo": "Bichon frisé"
+}
+
+###
+DELETE http://localhost:3000/api/animals/2
+
+###
+
+PUT http://localhost:3000/api/animals/8
+Content-Type: application/json
+
+{
+    "name": "MÖRA",
+    "animalType": "igelkott",
+    "otherInfo": "inget"
+}
+
+
