@@ -1,4 +1,8 @@
 const { Request, Response, NextFunction } = require('express');
+const fileSystem = require('fs');
+const path = require('path');
+const dbFilePath = path.resolve(__dirname, './animalDb.json');
+
 
 //in memory db
 let animalIdIndex = 1;
@@ -16,11 +20,12 @@ let animals = [{
  * @param {NextFunction} next 
  */
 function getAnimals(req, res, next) {
-    res.json(animals);
+    let jsonFileData = JSON.parse(fileSystem.readFileSync(dbFilePath));
+    res.json(jsonFileData);  
 }
 
 /**
- * Responds with one animal from in memory db
+ * Responds with one animal from in memory db 
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
