@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAnimals, getOneAnimal, saveAnimal, updateAnimal, deleteAnimal } = require('./controller');
+const { getAnimals, getOneAnimal, addAnimal, updateAnimal, deleteAnimal } = require('./controller');
 
 
 
@@ -14,7 +14,7 @@ router.get('/api/animals', getAnimals);
  router.get('/api/animals/:id', getOneAnimal);
     
 //POST
-router.post('/api/animals', saveAnimal);
+router.post('/api/animals', addAnimal);
 
 // PUT
 

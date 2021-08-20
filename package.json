@@ -11,9 +11,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-validator": "^6.12.1",
-    "nodemon": "^2.0.12"
-  },
-  "nodemonConfig": {
-    "ignore": "./animals/animalDb.json"
+    "nodemon": "^2.0.12",
+    "uuid": "^8.3.2"
   }
 }

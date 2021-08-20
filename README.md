@@ -35,3 +35,5 @@ visa upp resultatet vid GET anrop
 
 const dbFilePath = path.resolve(__dirname, './animalDb.json'); `
 eller använda mig av require iställlet för fs, men valde de övre då det verkar som att fs är mer komatibel med förändringar i dynamiska filer.
+
+filens innehåll finns kvar, trots omstart
