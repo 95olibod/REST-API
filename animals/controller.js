@@ -7,11 +7,10 @@ let jsonFileData = JSON.parse(fileSystem.readFileSync(dbFilePath));
 
 
 //in memory db
-let animalIdIndex = 0;
 let animals = jsonFileData;
 
 /**
- * Responds with all animals from in memory db
+ * Responds with all animals from file-db
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
@@ -21,7 +20,7 @@ function getAnimals(req, res, next) {
 }
  
 /**
- * Responds with one animal from in memory db   
+ * Responds with one animal from file-db   
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
@@ -30,24 +29,21 @@ function getOneAnimal(req, res, next) {
     const { id } = req.params;
     const animal = animals.find(animal => animal.id == id);
     if (!animal) {
-    res.status(404).json('animal with id ${id} was not found.');
+    res.status(404).json(`animal with id ${id} could not be found `);
     } else {
     res.status(200).json(animal);
     }
 }
 
 /**
- * 
+ * Add animal oject to file-db and responds whith all
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
  */
 function addAnimal(req, res, next) {
-    // let { id } = animals.pop();
     const animal = { ...req.body, id: uuidv1() }
-
     fileSystem.readFile(dbFilePath, 'utf8', (err, data) => {
-
         if (err) {
             console.log(`Error reading file from disk: ${err}`);
         } else {
@@ -57,7 +53,7 @@ function addAnimal(req, res, next) {
             // write new data back to the file
             fileSystem.writeFile(dbFilePath, JSON.stringify(animals, null, 4), (err) => {
                 if (err) {
-                    console.log(`Error writing file: ${err}`);
+                    console.log(`Error writing to file: ${err}`);
                 } 
             }); 
             res.json(jsonFileData);
@@ -67,7 +63,7 @@ function addAnimal(req, res, next) {
 } 
 
 /**
- * 
+ * Updateing json file-db
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
@@ -82,30 +78,33 @@ function updateAnimal(req, res, next) {
         const animal = animals.find(animal => animal.id == id);
         res.status(200).json(animal);
     } else {   
-        res.status(404).json('animal with that id could not be found');
+        res.status(404).json(`animal with id ${id} could not be found `);
     }
 }
 
 /**
- * 
+ * Deletes object from josn file-db
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
  */
  function deleteAnimal(req, res, next) {
     const { id } = req.params;
-    const animalIndex = animals.findIndex(animal => animal.id == id);
-    if (!req.params.id) {
-    res.status(404).json('animal with id ${id} was not found.');
+    const animal = animals.find(animal => animal.id == id);
+    if (!animal) {
+    res.status(404).json(`animal with id ${id} could not be found `);
     } else {
-        // animals.splice(animalIdIndex, 1);
         const updatedAnimals = animals.filter((animal) => animal.id != id);
-        animals = updatedAnimals; 
-    res.status(200).json(animals);
+        fileSystem.writeFile(dbFilePath, JSON.stringify(updatedAnimals, null, 4), (err) => {
+            if (err) {
+                console.log(`Error writing to file: ${err}`);
+            }
+        });
+    res.status(200).json(updatedAnimals);
     }
  }
 
-
+//Exports methods to router
 module.exports = {
     getAnimals,
     getOneAnimal,

@@ -2,7 +2,7 @@ GET http://localhost:3000/api/animals/
 
 ###
 
-GET http://localhost:3000/api/animals/4
+GET http://localhost:3000/api/animals/93244cd0-01b9-11ec-9841-a909d501f613
 
 ###
 
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/animals/2
+DELETE http://localhost:3000/api/animals/1cd70080-01ba-11ec-a35b-d181e9876b6d
 
 ###
 
