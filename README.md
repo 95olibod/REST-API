@@ -31,3 +31,7 @@ Krav för väl godkänt:
 4. Ett simpelt klient-gränssnitt skall finnas för att anropa API:ets olika endpoints, samt
 visa upp resultatet vid GET anrop
 5. Ytterligare en GET endpoint skall läggas till där det går att hämta ett specifikt objekt
+
+
+const dbFilePath = path.resolve(__dirname, './animalDb.json'); `
+eller använda mig av require iställlet för fs, men valde de övre då det verkar som att fs är mer komatibel med förändringar i dynamiska filer.

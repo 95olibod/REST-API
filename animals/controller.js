@@ -2,6 +2,7 @@ const { Request, Response, NextFunction } = require('express');
 const fileSystem = require('fs');
 const path = require('path');
 const dbFilePath = path.resolve(__dirname, './animalDb.json');
+let jsonFileData = JSON.parse(fileSystem.readFileSync(dbFilePath));
 
 
 //in memory db
@@ -20,12 +21,11 @@ let animals = [{
  * @param {NextFunction} next 
  */
 function getAnimals(req, res, next) {
-    let jsonFileData = JSON.parse(fileSystem.readFileSync(dbFilePath));
     res.json(jsonFileData);  
 }
 
 /**
- * Responds with one animal from in memory db 
+ * Responds with one animal from in memory db  
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
@@ -47,9 +47,29 @@ function getOneAnimal(req, res, next) {
  * @param {NextFunction} next 
  */
 function saveAnimal(req, res, next) {
-    const animal = { ...req.body, id: animalIdIndex++ } // plockar alla properties i animals med ... (Klona)
-    animals.push(animal);
-    res.json(animal);
+    const animal = { ...req.body, id: animalIdIndex++ }
+
+    fileSystem.readFile(dbFilePath, 'utf8', (err, data) => {
+
+        if (err) {
+            console.log(`Error reading file from disk: ${err}`);
+        } else {
+    
+            // parse JSON string to JSON object
+            const animalDb = JSON.parse(data);
+            console.log(animalDb);
+            // add a new record
+            animals.push(animal);
+    
+            // write new data back to the file
+            fileSystem.writeFile(dbFilePath, JSON.stringify(animals, null, 4), (err) => {
+                if (err) {
+                    console.log(`Error writing file: ${err}`);
+                }
+            });
+        }
+    
+    });
 }
 
 /**

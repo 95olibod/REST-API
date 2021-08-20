@@ -10,7 +10,7 @@ POST http://localhost:3000/api/animals
 Content-Type: application/json
 
 {
-    "name": "myra",
+    "name": "ormen",
     "animalType": "hund",
     "otherInfo": "Bichon frisé"
 }
@@ -20,7 +20,7 @@ DELETE http://localhost:3000/api/animals/2
 
 ###
 
-PUT http://localhost:3000/api/animals/4
+PUT http://localhost:3000/api/animals/1
 Content-Type: application/json
 
 {

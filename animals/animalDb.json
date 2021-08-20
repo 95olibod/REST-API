@@ -1,6 +1,26 @@
-{
-    "name": "Dodgerrr",
-    "animalType": "Hund",
-    "otherInfo": "Bichon frisé",
-    "id": 0
-}
+[
+    {
+        "name": "Dodger",
+        "animalType": "Hund",
+        "otherInfo": "Bichon frisé",
+        "id": 0
+    },
+    {
+        "name": "ormen",
+        "animalType": "hund",
+        "otherInfo": "Bichon frisé",
+        "id": 1
+    },
+    {
+        "name": "ormen",
+        "animalType": "hund",
+        "otherInfo": "Bichon frisé",
+        "id": 2
+    },
+    {
+        "name": "ormen",
+        "animalType": "hund",
+        "otherInfo": "Bichon frisé",
+        "id": 3
+    }
+]
