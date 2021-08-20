@@ -16,7 +16,9 @@ Content-Type: application/json
 }
 
 ###
+
 DELETE http://localhost:3000/api/animals/1cd70080-01ba-11ec-a35b-d181e9876b6d
+
 
 ###
 

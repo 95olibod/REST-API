@@ -29,7 +29,9 @@ function getOneAnimal(req, res, next) {
     const { id } = req.params;
     const animal = animals.find(animal => animal.id == id);
     if (!animal) {
+
     res.status(404).json(`animal with id ${id} could not be found `);
+
     } else {
     res.status(200).json(animal);
     }
@@ -71,7 +73,8 @@ function addAnimal(req, res, next) {
 function updateAnimal(req, res, next) {
     const { id, name, animalType, otherInfo } = req.params;
     const animalIndex = animals.findIndex(animal => animal.id == id);
-    if(animalIndex){
+    const animal = animals.find(animal => animal.id == id);
+    if(animal){
         const clone = [ ...animals];
         clone[animalIndex] = { ...req.body, id: parseInt(id)};
         animals = clone;
