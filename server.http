@@ -2,7 +2,7 @@ GET http://localhost:3000/api/animals/
 
 ###
 
-GET http://localhost:3000/api/animals/93244cd0-01b9-11ec-9841-a909d501f613
+GET http://localhost:3000/api/animals/aec57110-01bb-11ec-8a94-776cede6f045
 
 ###
 
@@ -17,17 +17,17 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/api/animals/1cd70080-01ba-11ec-a35b-d181e9876b6d
+DELETE http://localhost:3000/api/animals/ff431350-01bf-11ec-ad08-c9b065e21291
 
 
 ###
 
-PUT http://localhost:3000/api/animals/1
+PUT http://localhost:3000/api/animals/2c8735a0-040c-11ec-913f-69d10cd696d6
 Content-Type: application/json
 
 {
-    "name": "MÖRA",
-    "animalType": "igelkott",
+    "name": "MYRA",
+    "animalType": "hund",
     "otherInfo": "inget"
 }
 

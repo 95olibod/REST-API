@@ -1,8 +1,20 @@
 [
     {
-        "name": "ormensssss",
+        "name": "MYRA",
+        "animalType": "igelkott",
+        "otherInfo": "inget",
+        "id": "2ae32290-040c-11ec-af62-ed134513ad77"
+    },
+    {
+        "name": "MYRA",
         "animalType": "hund",
-        "otherInfo": "Bichon frisé",
-        "id": "aec57110-01bb-11ec-8a94-776cede6f045"
+        "otherInfo": "inget",
+        "id": "2b072550-040c-11ec-af62-ed134513ad77"
+    },
+    {
+        "name": "MYRA",
+        "animalType": "hund",
+        "otherInfo": "inget",
+        "id": "2c8735a0-040c-11ec-913f-69d10cd696d6"
     }
 ]

@@ -71,22 +71,42 @@ function addAnimal(req, res, next) {
  * @param {NextFunction} next 
  */
 function updateAnimal(req, res, next) {
-    const { id, name, animalType, otherInfo } = req.params;
-    const animalIndex = animals.findIndex(animal => animal.id == id);
-    const animal = animals.find(animal => animal.id == id);
-    if(animal){
-        const clone = [ ...animals];
-        clone[animalIndex] = { ...req.body, id: parseInt(id)};
-        animals = clone;
-        const animal = animals.find(animal => animal.id == id);
-        res.status(200).json(animal);
-    } else {   
-        res.status(404).json(`animal with id ${id} could not be found `);
-    }
+   const { id } = req.params;
+   const animal = animals.find(animal => animal.id == id);
+   const animalIndex = animals.findIndex(animal => animal.id == id);
+   const updatedAnimal = { ...req.body, id: id }
+
+   if(!animal) {
+    res.status(404).json(`animal with id ${id} could not be found `);
+   } else {
+       const clone = [ ...animals];
+       clone[animalIndex] = updatedAnimal;
+       animals = clone;
+       fileSystem.writeFile(dbFilePath, JSON.stringify(animals, null, 4), (err) => {
+        if (err) {
+            console.log(`Error writing to file: ${err}`);
+        } 
+    }); 
+    res.json(jsonFileData);
+   }
+   
+   
+    // const { id, name, animalType, otherInfo } = req.params;
+    // const animalIndex = animals.findIndex(animal => animal.id == id);
+    // const animal = animals.find(animal => animal.id == id);
+    // if(animal){
+    //     const clone = [ ...animals];
+    //     clone[animalIndex] = { ...req.body, id: parseInt(id)};
+    //     animals = clone;
+    //     const animal = animals.find(animal => animal.id == id);
+    //     res.status(200).json(animal);
+    // } else {   
+    //     res.status(404).json(`animal with id ${id} could not be found `);
+    // }
 }
 
 /**
- * Deletes object from josn file-db
+ * Deletes object from josn file-db 
  * @param {Request} req 
  * @param {Response} res 
  * @param {NextFunction} next 
