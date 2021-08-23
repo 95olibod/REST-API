@@ -26,7 +26,7 @@ PUT http://localhost:3000/api/animals/2c8735a0-040c-11ec-913f-69d10cd696d6
 Content-Type: application/json
 
 {
-    "name": "MYRA",
+    "name": "MYRAnnnnnnnnnnnnnnn",
     "animalType": "hund",
     "otherInfo": "inget"
 }

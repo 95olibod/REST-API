@@ -87,7 +87,7 @@ function updateAnimal(req, res, next) {
             console.log(`Error writing to file: ${err}`);
         } 
     }); 
-    res.json(jsonFileData);
+    res.json(animals);
    }
    
    
