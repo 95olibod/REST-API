@@ -2,7 +2,7 @@ GET http://localhost:3000/api/animals/
 
 ###
 
-GET http://localhost:3000/api/animals/aec57110-01bb-11ec-8a94-776cede6f045
+GET http://localhost:3000/api/animals/a6bd68c0-04b7-11ec-8fd4-91c86f35e4f1
 
 ###
 
@@ -17,18 +17,18 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/api/animals/ff431350-01bf-11ec-ad08-c9b065e21291
+DELETE http://localhost:3000/api/animals/a6bd68c0-04b7-11ec-8fd4-91c86f35e4f1
 
 
 ###
 
-PUT http://localhost:3000/api/animals/2c8735a0-040c-11ec-913f-69d10cd696d6
+PUT http://localhost:3000/api/animals/6ac8bef0-04b7-11ec-8cb3-4f38b64e5232
 Content-Type: application/json
 
 {
-    "name": "MYRAnnnnnnnnnnnnnnn",
-    "animalType": "hund",
-    "otherInfo": "inget"
+    
+    
+    "otherInfo": "inggggggggggggget"
 }
 
 

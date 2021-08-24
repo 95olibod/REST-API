@@ -1,26 +1,34 @@
 [
     {
         "name": "MYRA",
-        "animalType": "igelkott",
-        "otherInfo": "inget",
-        "id": "2ae32290-040c-11ec-af62-ed134513ad77"
+        "animalType": "hghhund",
+        "otherInfo": "inggggggggggggget",
+        "id": "6ac8bef0-04b7-11ec-8cb3-4f38b64e5232"
     },
     {
-        "name": "MYRA",
-        "animalType": "hund",
-        "otherInfo": "inget",
-        "id": "2b072550-040c-11ec-af62-ed134513ad77"
-    },
-    {
-        "name": "MYRAnnnnnnnnnnnnnnn",
-        "animalType": "hund",
-        "otherInfo": "inget",
-        "id": "2c8735a0-040c-11ec-913f-69d10cd696d6"
+        "name": "ormensssss",
+        "id": "a7dfefc0-04b7-11ec-94eb-27cf43fcc6ca"
     },
     {
         "name": "ormensssss",
         "animalType": "hund",
         "otherInfo": "Bichon frisé",
-        "id": "b2fe4650-040c-11ec-a835-5fc087af3d45"
+        "id": "b2994c40-04b7-11ec-a08f-d9809406b446"
+    },
+    {
+        "animalType": "hund",
+        "otherInfo": "inget",
+        "id": "4c878cb0-04bb-11ec-a51f-994007a80052"
+    },
+    {
+        "animalType": "hund",
+        "otherInfo": "inget",
+        "id": "506a4520-04bb-11ec-936b-13d4ee98b3aa"
+    },
+    {
+        "name": "ormensssss",
+        "animalType": "hund",
+        "otherInfo": "Bichon frisé",
+        "id": "5257e450-04bb-11ec-aee1-19062c1875d6"
     }
 ]

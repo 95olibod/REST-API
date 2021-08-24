@@ -76,33 +76,29 @@ function updateAnimal(req, res, next) {
    const animalIndex = animals.findIndex(animal => animal.id == id);
    const updatedAnimal = { ...req.body, id: id }
 
+   if(req.body.name) { 
+    animal.name = updatedAnimal.name;
+   } 
+   if(req.body.animalType) {
+    animal.animalType = updatedAnimal.animalType;
+   } 
+   if(req.body.otherInfo) {
+    animal.otherInfo = updatedAnimal.otherInfo;
+   }  
+
    if(!animal) {
     res.status(404).json(`animal with id ${id} could not be found `);
    } else {
        const clone = [ ...animals];
-       clone[animalIndex] = updatedAnimal;
+       clone[animalIndex] = animal;
        animals = clone;
        fileSystem.writeFile(dbFilePath, JSON.stringify(animals, null, 4), (err) => {
         if (err) {
             console.log(`Error writing to file: ${err}`);
         } 
     }); 
-    res.json(animals);
+    res.json(animals); 
    }
-   
-   
-    // const { id, name, animalType, otherInfo } = req.params;
-    // const animalIndex = animals.findIndex(animal => animal.id == id);
-    // const animal = animals.find(animal => animal.id == id);
-    // if(animal){
-    //     const clone = [ ...animals];
-    //     clone[animalIndex] = { ...req.body, id: parseInt(id)};
-    //     animals = clone;
-    //     const animal = animals.find(animal => animal.id == id);
-    //     res.status(200).json(animal);
-    // } else {   
-    //     res.status(404).json(`animal with id ${id} could not be found `);
-    // }
 }
 
 /**

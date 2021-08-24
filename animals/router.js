@@ -6,6 +6,10 @@ const { getAnimals, getOneAnimal, addAnimal, updateAnimal, deleteAnimal } = requ
 //create object router
 const router = express.Router(); 
 
+router.get('/', (req, res, next) => {
+    next();
+})
+
 
 //GET
 router.get('/api/animals', getAnimals);
@@ -17,11 +21,9 @@ router.get('/api/animals', getAnimals);
 router.post('/api/animals', addAnimal);
 
 // PUT
-
 router.put('/api/animals/:id', updateAnimal);
 
 //DELETE 
-
 router.delete('/api/animals/:id', deleteAnimal);
 
 //export the object router
