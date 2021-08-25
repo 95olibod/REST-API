@@ -10,21 +10,50 @@
     <title>Djurparken</title>
 </head>
 <body class="">
-    <header id= "header", class="flex content-center">OLIVIAS DJURPARK</header>
-
-    <div class="outer-div flex row">
+    <header id= "header", class="flex content-center">OLIVIAS DJURPARK
         <button id="animals-btn"> Se alla djur </button>
-        <button id="search-btn">Sök</button>
-        <button id="add-btn">Lägg till</button>
-    </div>
+    </header>
 
-    <div id=""></div>
-    <div id="animal-box" class="flex column"></div>
-
-
-    <button id="edit-btn">Redigera</button>
-    <button id="delete-btn">Ta bort</button>
-
-   
+    <div class="outer-div flex column">
+        <div class="flex row">
+            <div class="flex column margin-l margin-r">
+                <p>Sök efter djur</p><br>
+                    <label for="getOneAnimalFromId">ID nummer: </label>
+                    <input type="text" id= "getOneAnimalFromId" name="getOneAnimalFromId">
+                    <input type="submit" value="Sök" id="search-btn">
+            </div>
+            <div class="flex column margin-l margin-r">
+                <p>Lägg till ett djur</p><br>
+                <label for="addName">Namn:  </label>
+                <input type="text" id= "addName" name="addName">
+                <label for="addSpecies">Art:  </label>
+                <input type="text" id= "addSpecies" name="addSpecies">
+                <label for="addOther">Annan info:  </label>
+                <input type="text" id= "addOther" name="addOther">
+                <input type="submit" value="Lägg till" id="add-btn">
+            </div>
+            <div class="flex column margin-l margin-r">
+                <p>Ta bort ett djur</p><br>
+                <label for="deleteAnimal">ID: </label>
+                <input type="text" id= "deleteAnimal" name="deleteAnimal">
+                <input type="submit" value="Ta bort" id="delete-btn">
+            </div>
+            <div class="flex column margin-l margin-r">
+                <p>Redigera ett djur</p><br>
+                <label for="editWithId">ID:  </label>
+                <input type="text" id= "editWithId" name="editWithId">
+                <label for="addNewName">Namn:  </label>
+                <input type="text" id= "addNewName" name="addNewName">
+                <label for="addNewSpecies">Art:  </label>
+                <input type="text" id= "addNewSpecies" name="addNewSpecies">
+                <label for="addNewOther">Annan info:  </label>
+                <input type="text" id= "addNewOther" name="addNewOther">
+                <input type="submit" value="Spara" id="edit-btn">
+            </div>
+        </div>
+        </div>
+        
+    
+    <div id="animal-box" class="flex column">RESULTAT: <br></div> 
 </body>
 </html>

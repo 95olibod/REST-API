@@ -1,34 +1,20 @@
 [
     {
         "name": "MYRA",
-        "animalType": "hghhund",
-        "otherInfo": "inggggggggggggget",
+        "animalType": "hund",
+        "otherInfo": "Bichon frisé, 4 år",
         "id": "6ac8bef0-04b7-11ec-8cb3-4f38b64e5232"
     },
     {
-        "name": "ormensssss",
+        "name": "Zseek",
+        "animalType": "Orm",
+        "otherInfo": "Anakonda, 12 år, Farlig!",
         "id": "a7dfefc0-04b7-11ec-94eb-27cf43fcc6ca"
     },
     {
-        "name": "ormensssss",
-        "animalType": "hund",
-        "otherInfo": "Bichon frisé",
+        "name": "Elis",
+        "animalType": "Elefant",
+        "otherInfo": "utrotningshotad, 30 år",
         "id": "b2994c40-04b7-11ec-a08f-d9809406b446"
-    },
-    {
-        "animalType": "hund",
-        "otherInfo": "inget",
-        "id": "4c878cb0-04bb-11ec-a51f-994007a80052"
-    },
-    {
-        "animalType": "hund",
-        "otherInfo": "inget",
-        "id": "506a4520-04bb-11ec-936b-13d4ee98b3aa"
-    },
-    {
-        "name": "ormensssss",
-        "animalType": "hund",
-        "otherInfo": "Bichon frisé",
-        "id": "5257e450-04bb-11ec-aee1-19062c1875d6"
     }
 ]

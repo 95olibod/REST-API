@@ -16,5 +16,4 @@ app.use(express.static('public'));
 // Start the server
 app.listen(3000, () => {
     console.log('sever is running at http://localhost:3000')
-}) 
- 
+})
