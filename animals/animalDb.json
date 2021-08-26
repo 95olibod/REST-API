@@ -1,20 +1,14 @@
 [
     {
-        "name": "MYRA",
-        "animalType": "hund",
-        "otherInfo": "Bichon frisé, 4 år",
-        "id": "6ac8bef0-04b7-11ec-8cb3-4f38b64e5232"
-    },
-    {
         "name": "Zseek",
         "animalType": "Orm",
         "otherInfo": "Anakonda, 12 år, Farlig!",
         "id": "a7dfefc0-04b7-11ec-94eb-27cf43fcc6ca"
     },
     {
-        "name": "Elis",
+        "name": "Elefantis",
         "animalType": "Elefant",
-        "otherInfo": "utrotningshotad, 30 år",
-        "id": "b2994c40-04b7-11ec-a08f-d9809406b446"
+        "otherInfo": "20 år, 200 kg",
+        "id": "42e559b0-0675-11ec-a3ef-5358cf37968f"
     }
 ]

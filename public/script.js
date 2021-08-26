@@ -3,9 +3,9 @@ window.addEventListener('load', main);
 function main() {
     requestAnimals();
     requestSearch();
-    requestAddAnimal();
+    // requestAddAnimal();
     requestDeleteAnimal();
-    requestEditAnimal();
+    // requestEditAnimal();
 }
 
 function requestAnimals() {
@@ -21,10 +21,11 @@ async function fetchAnimals(event) {
     const animals = await res.json();
 
     for(const animal of animals) {
-        const oneAnimal = JSON.stringify(animal, null, 4);
-        console.log(oneAnimal);
+        // const oneAnimal = JSON.stringify(animal, null, 4);
+        // console.log(oneAnimal);
         const paragraf = document.createElement('p');
-        paragraf.append(oneAnimal);
+        paragraf.innerHTML = "<pre>" + JSON.stringify(animal, null, 4) + "<pre>";
+        // paragraf.append(JSON.stringify(oneAnimal, null, 4));
         div.append(paragraf);
     }
 }
@@ -41,47 +42,47 @@ async function fetchOneAnimal(event) {
     if(!animalId){
         window.alert('Du måste fylla i ett id nummer')
     } else {   
-        const res = await fetch('api/animals/' + animalId);
+        const res = await fetch(`api/animals/${animalId}`);
         const animal = await res.json();
-        const oneAnimal = JSON.stringify(animal, null, 4);
-        const paragraf = document.createElement('p');
-        paragraf.append(oneAnimal);
-        div.append(paragraf);
+        div.innerHTML = "<pre>" + JSON.stringify(animal, null, 4) + "<pre>";
     }
     
 }
 
-function requestAddAnimal() {
-    const searchButton = document.querySelector('#add-btn');
-    searchButton.addEventListener('click', AddOneAnimal);
-}
+// function requestAddAnimal() {
+//     const searchButton = document.querySelector('#add-btn');
+//     searchButton.addEventListener('click', AddOneAnimal);
+// }
 
-async function addOneAnimal() {
+// async function addOneAnimal() {
 
-}
 
-function requestDeleteAnimal() {
-    const searchButton = document.querySelector('#delete-btn');
-    searchButton.addEventListener('click', deleteOneAnimal);
-}
+    // }
+    
+    function requestDeleteAnimal() {
+            const searchButton = document.querySelector('#delete-btn');
+            searchButton.addEventListener('click', deleteOneAnimal);
+    }
+        
+    async function deleteOneAnimal() {
+        const id = document.querySelector("#deleteAnimal").value;
+        const res = await fetch(`api/animals/${id}`, {method: 'DELETE'});
+        const data = await res.json();
+        // await fetchAnimals();
+    }
 
-async function deleteOneAnimal() {
+// function requestEditAnimal() {
+//     const searchButton = document.querySelector('#delete-btn');
+//     searchButton.addEventListener('click', editOneAnimal);
+// }
 
-}
-
-function requestEditAnimal() {
-    const searchButton = document.querySelector('#delete-btn');
-    searchButton.addEventListener('click', editOneAnimal);
-}
-
-async function editOneAnimal() {
-
-}
+// async function editOneAnimal() {
+    // headers: "Content-Type: application/json",
+// }
 
 
 
 //fetch anrop för att få hem alla animals
-//fetch('api/animals/' + animal.id, {method: 'PUT', body: JSON.stringify(animal)});
 //skicka HELA objektet, underlättar
 
 //put - byter ut hela objektet, använd put inte patch

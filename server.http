@@ -10,9 +10,9 @@ POST http://localhost:3000/api/animals
 Content-Type: application/json
 
 {
-    "name": "ormensssss",
-    "animalType": "hund",
-    "otherInfo": "Bichon frisé"
+    "name": "Elefantis",
+    "animalType": "Elefant",
+    "otherInfo": "20 år, 200 kg"
 }
 
 ###
