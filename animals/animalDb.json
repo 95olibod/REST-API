@@ -10,5 +10,29 @@
         "animalType": "Elefant",
         "otherInfo": "20 år, 200 kg",
         "id": "42e559b0-0675-11ec-a3ef-5358cf37968f"
+    },
+    {
+        "name": "aa",
+        "animalType": "bb",
+        "otherInfo": "cc",
+        "id": "bb2efbe0-071c-11ec-b75d-89e3a1436e5e"
+    },
+    {
+        "name": "sture",
+        "animalType": "Struts",
+        "otherInfo": "175 cm lång",
+        "id": "ccd19a10-071c-11ec-97af-f3a328a84f14"
+    },
+    {
+        "name": "aa",
+        "animalType": "bb",
+        "otherInfo": "cc",
+        "id": "038756d0-071d-11ec-abd3-690ce3596353"
+    },
+    {
+        "name": "aaaaaaaa",
+        "animalType": "bb",
+        "otherInfo": "cc",
+        "id": "09aef630-071d-11ec-8142-c98ed86c77a3"
     }
 ]

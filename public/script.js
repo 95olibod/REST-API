@@ -3,7 +3,7 @@ window.addEventListener('load', main);
 function main() {
     requestAnimals();
     requestSearch();
-    // requestAddAnimal();
+    requestAddAnimal();
     requestDeleteAnimal();
     // requestEditAnimal();
 }
@@ -49,15 +49,27 @@ async function fetchOneAnimal(event) {
     
 }
 
-// function requestAddAnimal() {
-//     const searchButton = document.querySelector('#add-btn');
-//     searchButton.addEventListener('click', AddOneAnimal);
-// }
+function requestAddAnimal() {
+    const searchButton = document.querySelector('#add-btn');
+    searchButton.addEventListener('click', addOneAnimal);
+}
 
-// async function addOneAnimal() {
-
-
-    // }
+async function addOneAnimal() {
+    const animalName = document.querySelector("#addName").value;
+    const animalSpecies = document.querySelector("#addSpecies").value;
+    const animalOtherInfo = document.querySelector("#addOther").value;
+    const res = await fetch('api/animals/', {
+        method: 'POST', 
+        headers: {"Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: animalName,
+            animalType: animalSpecies,
+            otherInfo: animalOtherInfo
+        })
+    });
+    await fetchAnimals();
+}
     
     function requestDeleteAnimal() {
             const searchButton = document.querySelector('#delete-btn');
