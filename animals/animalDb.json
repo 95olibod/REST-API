@@ -1,18 +1,12 @@
 [
     {
-        "name": "Zseek",
-        "animalType": "Orm",
-        "otherInfo": "Anakonda, 12 år, Farlig!",
-        "id": "a7dfefc0-04b7-11ec-94eb-27cf43fcc6ca"
-    },
-    {
-        "name": "Elefantis",
+        "name": "abbe",
         "animalType": "Elefant",
         "otherInfo": "20 år, 200 kg",
         "id": "42e559b0-0675-11ec-a3ef-5358cf37968f"
     },
     {
-        "name": "sture",
+        "name": "Sture",
         "animalType": "Struts",
         "otherInfo": "175 cm lång",
         "id": "ccd19a10-071c-11ec-97af-f3a328a84f14"
@@ -24,15 +18,27 @@
         "id": "c0505960-071d-11ec-8d60-c1cda362be7b"
     },
     {
-        "name": "a",
-        "animalType": "a",
-        "otherInfo": "a",
+        "name": "Katja",
+        "animalType": "Katt",
+        "otherInfo": "Svart med vita fläckar",
         "id": "f40c32e0-0724-11ec-8692-c7858ea91625"
     },
     {
-        "name": "ed",
-        "animalType": "ed",
-        "otherInfo": "ed",
+        "name": "Leonardo",
+        "animalType": "Lejon",
+        "otherInfo": "Vit, utrotningshotad",
         "id": "2ef44eb0-0725-11ec-aa3c-dbd2fc4806fa"
+    },
+    {
+        "name": "Zeek",
+        "animalType": "Orm",
+        "otherInfo": "FARLIG - Anakonda",
+        "id": "ccbd88f0-0734-11ec-ad36-591f6df43909"
+    },
+    {
+        "name": "Great",
+        "animalType": "Gris",
+        "otherInfo": "Röd klänning",
+        "id": "0bfbdf80-0735-11ec-a81e-3d7e5ca1a7af"
     }
 ]

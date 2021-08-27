@@ -5,7 +5,7 @@ function main() {
     requestSearch();
     requestAddAnimal();
     requestDeleteAnimal();
-    // requestEditAnimal();
+    requestEditAnimal();
 }
 
 function requestAnimals() {
@@ -35,17 +35,18 @@ function requestSearch() {
     searchButton.addEventListener('click', fetchOneAnimal);
 }
 
-async function fetchOneAnimal(id) {
+async function fetchOneAnimal() {
     const div = document.querySelector('#animal-box');
     div.innerHTML = "";
     const animalId = document.getElementById("getOneAnimalFromId").value;
-    if(!animalId){
-        window.alert('Du måste fylla i ett id nummer')
-    } else {   
-        const res = await fetch(`api/animals/${animalId}`);
-        const animal = await res.json();
-        div.innerHTML = "<pre>" + JSON.stringify(animal, null, 4) + "<pre>";
-    }
+
+        if(!animalId){
+            window.alert('Du måste fylla i ett id nummer')
+        }else {   
+            const res = await fetch(`api/animals/${animalId}`);
+            const animal = await res.json();
+            div.innerHTML = "<pre>" + JSON.stringify(animal, null, 4) + "<pre>";
+        }
     document.getElementById("getOneAnimalFromId").value = "";
 }
 
@@ -93,26 +94,53 @@ async function addOneAnimal() {
         await fetchAnimals();
 }
 
-// såhär var den innan:
-    // const id = document.querySelector("#deleteAnimal").value;
-    // await fetch(`api/animals/${id}`, {method: 'DELETE'});
-    // alert(`Animal with id:` + "\n" + `${id}` + "\n" + `is now removed`);
-    // await fetchAnimals();
+
+function requestEditAnimal() {
+    const searchButton = document.querySelector("#edit-btn");
+    searchButton.addEventListener('click', editOneAnimal);
+}
+
+async function editOneAnimal() {
+    const animalId = document.querySelector("#editWithId").value;
+    const res = await fetch(`api/animals/${animalId}`);
+    const animal = res.json();
+    console.log(animal);
+    const animalName = document.querySelector("#addNewName").value;
+    const animalSpecies = document.querySelector("#addNewSpecies").value;
+    const animalOtherInfo = document.querySelector("#addNewOther").value;
 
 
+    if(res.statusText !== "OK"){
+        alert("Ett djur med detta ID existerar inte.");
 
-// function requestEditAnimal() {
-//     const searchButton = document.querySelector('#delete-btn');
-//     searchButton.addEventListener('click', editOneAnimal);
-// }
+    } else {
+        const response = await fetch(`api/animals/${animalId}`, {
+            method: 'PUT', 
+            headers: {"Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: animalName,
+                animalType: animalSpecies,
+                otherInfo: animalOtherInfo
+            })
+        });
+        alert(`Djuret med ID: ` + "\n" + `${animalId}` + "\n" + `har nu redigerats`);
+        await fetchOneAnimalById(animalId);
+        document.querySelector("#addNewName").value = "";
+        document.querySelector("#addNewSpecies").value = "";
+        document.querySelector("#addNewOther").value = "";
+    }
 
-// async function editOneAnimal() {
-    // headers: "Content-Type: application/json",
-// }
+}
 
-
-
-//fetch anrop för att få hem alla animals
-//skicka HELA objektet, underlättar
-
-//put - byter ut hela objektet, använd put inte patch
+async function fetchOneAnimalById(id) {
+    const div = document.querySelector('#animal-box');
+    div.innerHTML = "";
+    const animalId = document.getElementById("getOneAnimalFromId").value;
+    
+        const res= await fetch(`api/animals/${id}`);
+        const animal = await res.json();
+        div.innerHTML = "<pre>" + JSON.stringify(animal, null, 4) + "<pre>";
+    
+    // document.getElementById("getOneAnimalFromId").value = "";
+}
