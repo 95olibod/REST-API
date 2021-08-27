@@ -1,14 +1,8 @@
 [
     {
-        "name": "abbe",
-        "animalType": "Elefant",
-        "otherInfo": "20 år, 200 kg",
-        "id": "42e559b0-0675-11ec-a3ef-5358cf37968f"
-    },
-    {
         "name": "Sture",
         "animalType": "Struts",
-        "otherInfo": "175 cm lång",
+        "otherInfo": "176 cm lång",
         "id": "ccd19a10-071c-11ec-97af-f3a328a84f14"
     },
     {
@@ -36,9 +30,15 @@
         "id": "ccbd88f0-0734-11ec-ad36-591f6df43909"
     },
     {
-        "name": "Great",
-        "animalType": "Gris",
-        "otherInfo": "Röd klänning",
-        "id": "0bfbdf80-0735-11ec-a81e-3d7e5ca1a7af"
+        "name": "Ellis",
+        "animalType": "Elefant",
+        "otherInfo": "20 år, 300kg ",
+        "id": "f7752240-0736-11ec-b9f0-9d19ae329790"
+    },
+    {
+        "name": "Ture",
+        "animalType": "Tiger",
+        "otherInfo": "10 år",
+        "id": "68a017f0-073b-11ec-81d0-fbbdf3c4c3e3"
     }
 ]

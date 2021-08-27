@@ -36,6 +36,10 @@ body {
     justify-content: space-around;
 }
 
+.flex-shrink {
+    flex-shrink: 1;
+}
+
 /* header */
 
 header {
@@ -53,17 +57,22 @@ header {
 .outer-div {
     background-color: #E1BB80;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-    margin: 4em;
-    min-height: 1em;
-    min-width: 1em;
+    margin: 2em;
+    max-width: 100%;
+    max-height: 100%;
     padding: 1em;
+}
+
+#inner-div {
+    max-width: 100%;
+    max-height: fit-content;
 }
 
 #delete-btn {
     background-image: url('https://cdn.pixabay.com/photo/2019/12/09/11/43/antelope-4683342__340.jpg');
     background-size: cover;
-    width: 250px;
-    height: 120px;
+    width: 200px;
+    height: 90px;
     font-size: 1rem;
     color:#E1BB80;
     border-radius: 12px;
@@ -73,8 +82,8 @@ header {
 #search-btn {
     background-image: url('https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045_960_720.jpg');
     background-size: cover;
-    width: 250px;
-    height: 120px;
+    width: 200px;
+    height: 90px;
     font-size: 1rem;
     color:#E1BB80;
     border-radius: 12px;
@@ -84,8 +93,8 @@ header {
 #add-btn {
     background-image: url('https://images.pexels.com/photos/242796/pexels-photo-242796.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     background-size: cover;
-    width: 250px;
-    height: 120px;
+    width: 200px;
+    height: 90px;
     font-size: 1rem;
     color:#E1BB80;
     border-radius: 12px;
@@ -96,8 +105,8 @@ header {
     
     background-image: url('https://images.pexels.com/photos/2576780/pexels-photo-2576780.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-size: cover;
-    width: 250px;
-    height: 120px;
+    width: 200px;
+    height: 90px;
     font-size: 1rem;
     color:#E1BB80;
     border-radius: 12px;
@@ -113,4 +122,10 @@ header {
     border-radius: 12px;
     border-color: #E1BB80;
     margin: 0 4em;
+}
+
+@media (max-width: 1200px) {
+    #inner-div {
+        flex-direction: column;
+    }
 }

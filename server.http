@@ -2,7 +2,7 @@ GET http://localhost:3000/api/animals/
 
 ###
 
-GET http://localhost:3000/api/animals/a6bd68c0-04b7-11ec-8fd4-91c86f35e4f1
+GET http://localhost:3000/api/animals/ccd19a10-071c-11ec-97af-f3a328a84f14
 
 ###
 
@@ -10,25 +10,27 @@ POST http://localhost:3000/api/animals
 Content-Type: application/json
 
 {
-    "name": "Elefantis",
-    "animalType": "Elefant",
-    "otherInfo": "20 år, 200 kg"
+    "name": "Tore",
+    "animalType": "Tiger",
+    "otherInfo": "10 år"
+    
 }
 
 ###
 
-DELETE http://localhost:3000/api/animals/a6bd68c0-04b7-11ec-8fd4-91c86f35e4f1
+DELETE http://localhost:3000/api/animals/7ee853f0-073c-11ec-9431-bb2083057d40
 
 
 ###
 
-PUT http://localhost:3000/api/animals/6ac8bef0-04b7-11ec-8cb3-4f38b64e5232
+PUT http://localhost:3000/api/animals/68a017f0-073b-11ec-81d0-fbbdf3c4c3e3
 Content-Type: application/json
 
 {
     
-    
-    "otherInfo": "inggggggggggggget"
+    "name": "Ture",
+    "animalType": "Tiger",
+    "otherInfo": ""
 }
 
 
