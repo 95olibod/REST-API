@@ -22,5 +22,17 @@
         "animalType": "Zebra",
         "otherInfo": "blå",
         "id": "c0505960-071d-11ec-8d60-c1cda362be7b"
+    },
+    {
+        "name": "a",
+        "animalType": "a",
+        "otherInfo": "a",
+        "id": "f40c32e0-0724-11ec-8692-c7858ea91625"
+    },
+    {
+        "name": "ed",
+        "animalType": "ed",
+        "otherInfo": "ed",
+        "id": "2ef44eb0-0725-11ec-aa3c-dbd2fc4806fa"
     }
 ]

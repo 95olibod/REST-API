@@ -46,9 +46,7 @@ async function fetchOneAnimal(id) {
         const animal = await res.json();
         div.innerHTML = "<pre>" + JSON.stringify(animal, null, 4) + "<pre>";
     }
-
-  
-    
+    document.getElementById("getOneAnimalFromId").value = "";
 }
 
 function requestAddAnimal() {
@@ -70,6 +68,9 @@ async function addOneAnimal() {
             otherInfo: animalOtherInfo
         })
     });
+    document.querySelector("#addName").value = "";
+    document.querySelector("#addSpecies").value = "";
+    document.querySelector("#addOther").value = "";
     await fetchAnimals();
 }
     
@@ -87,8 +88,8 @@ async function addOneAnimal() {
         } else {
             await fetch(`api/animals/${animalId}`, {method: 'DELETE'});
             alert(`Ett djur med ID: ` + "\n" + `${animalId}` + "\n" + `är nu borttaget`);
-            document.querySelector("#deleteAnimal").value = "";
         }
+        document.querySelector("#deleteAnimal").value = "";
         await fetchAnimals();
 }
 
