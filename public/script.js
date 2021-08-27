@@ -78,9 +78,9 @@ async function addOneAnimal() {
         
     async function deleteOneAnimal() {
         const id = document.querySelector("#deleteAnimal").value;
-        const res = await fetch(`api/animals/${id}`, {method: 'DELETE'});
-        const data = await res.json();
-        // await fetchAnimals();
+        await fetch(`api/animals/${id}`, {method: 'DELETE'});
+        alert(`Animal with id:` + "\n" + `${id}` + "\n" + `is now removed`);
+        await fetchAnimals();
     }
 
 // function requestEditAnimal() {
