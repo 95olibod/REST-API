@@ -35,7 +35,7 @@ function requestSearch() {
     searchButton.addEventListener('click', fetchOneAnimal);
 }
 
-async function fetchOneAnimal(event) {
+async function fetchOneAnimal(id) {
     const div = document.querySelector('#animal-box');
     div.innerHTML = "";
     const animalId = document.getElementById("getOneAnimalFromId").value;
@@ -46,6 +46,8 @@ async function fetchOneAnimal(event) {
         const animal = await res.json();
         div.innerHTML = "<pre>" + JSON.stringify(animal, null, 4) + "<pre>";
     }
+
+  
     
 }
 
@@ -77,11 +79,26 @@ async function addOneAnimal() {
     }
         
     async function deleteOneAnimal() {
-        const id = document.querySelector("#deleteAnimal").value;
-        await fetch(`api/animals/${id}`, {method: 'DELETE'});
-        alert(`Animal with id:` + "\n" + `${id}` + "\n" + `is now removed`);
+        const animalId = document.querySelector("#deleteAnimal").value;
+        const res = await fetch(`api/animals/${animalId}`);
+        if(res.statusText !== "OK"){
+            alert("Ett djur med detta ID existerar inte.");
+
+        } else {
+            await fetch(`api/animals/${animalId}`, {method: 'DELETE'});
+            alert(`Ett djur med ID: ` + "\n" + `${animalId}` + "\n" + `är nu borttaget`);
+            document.querySelector("#deleteAnimal").value = "";
+        }
         await fetchAnimals();
-    }
+}
+
+// såhär var den innan:
+    // const id = document.querySelector("#deleteAnimal").value;
+    // await fetch(`api/animals/${id}`, {method: 'DELETE'});
+    // alert(`Animal with id:` + "\n" + `${id}` + "\n" + `is now removed`);
+    // await fetchAnimals();
+
+
 
 // function requestEditAnimal() {
 //     const searchButton = document.querySelector('#delete-btn');
