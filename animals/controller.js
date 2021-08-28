@@ -137,7 +137,7 @@ function deleteAnimal(req, res, next) {
 module.exports = {
   getAnimals,
   getOneAnimal,
-  addAnimal: addAnimal,
+  addAnimal,
   updateAnimal,
   deleteAnimal,
 };

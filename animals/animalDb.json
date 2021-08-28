@@ -52,5 +52,11 @@
         "animalType": "Hamster",
         "otherInfo": "bits",
         "id": "ef58a060-07e9-11ec-989f-8d7dd0bc742f"
+    },
+    {
+        "name": "Sune",
+        "animalType": "Säl",
+        "otherInfo": "Hal som en ål",
+        "id": "565c0000-07f3-11ec-9a11-c734558df2a6"
     }
 ]
