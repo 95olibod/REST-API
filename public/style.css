@@ -9,6 +9,7 @@ body {
 }
 
 /* reuseble classes */
+
 .flex {
     display: flex;
 }
@@ -36,9 +37,6 @@ body {
     justify-content: space-around;
 }
 
-.flex-shrink {
-    flex-shrink: 1;
-}
 
 /* header */
 
@@ -67,6 +65,8 @@ header {
     max-width: 100%;
     max-height: fit-content;
 }
+
+/* Buttons */
 
 #delete-btn {
     background-image: url('https://cdn.pixabay.com/photo/2019/12/09/11/43/antelope-4683342__340.jpg');
@@ -123,6 +123,8 @@ header {
     border-color: #E1BB80;
     margin: 0 4em;
 }
+
+/* media */
 
 @media (max-width: 1200px) {
     #inner-div {

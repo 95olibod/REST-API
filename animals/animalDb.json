@@ -14,7 +14,7 @@
     {
         "name": "Katja",
         "animalType": "Katt",
-        "otherInfo": "Svart med vita fläckar",
+        "otherInfo": "svart med vita fläckar",
         "id": "f40c32e0-0724-11ec-8692-c7858ea91625"
     },
     {
@@ -40,5 +40,17 @@
         "animalType": "Tiger",
         "otherInfo": "10 år",
         "id": "68a017f0-073b-11ec-81d0-fbbdf3c4c3e3"
+    },
+    {
+        "name": "Göran",
+        "animalType": "Hjort",
+        "otherInfo": "halt",
+        "id": "e0b1b600-07e9-11ec-99d6-ef724f109c1c"
+    },
+    {
+        "name": "Harry",
+        "animalType": "Hamster",
+        "otherInfo": "bits",
+        "id": "ef58a060-07e9-11ec-989f-8d7dd0bc742f"
     }
 ]

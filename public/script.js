@@ -8,11 +8,13 @@ function main() {
   requestEditAnimal();
 }
 
+// Eventlistner for GET- button
 function requestAnimals() {
   const animalButton = document.querySelector("#animals-btn");
   animalButton.addEventListener("click", fetchAnimals);
 }
 
+// fetch and shows output from animalDb.json
 async function fetchAnimals(event) {
   const div = document.querySelector("#animal-box");
   div.innerHTML = "";
@@ -26,10 +28,13 @@ async function fetchAnimals(event) {
   }
 }
 
+// Eventlistner for GET + id- button
 function requestSearch() {
   const searchButton = document.querySelector("#search-btn");
   searchButton.addEventListener("click", fetchOneAnimal);
 }
+
+// fetch one object from animalDb.json
 
 async function fetchOneAnimal() {
   const div = document.querySelector("#animal-box");
@@ -46,11 +51,13 @@ async function fetchOneAnimal() {
   document.getElementById("getOneAnimalFromId").value = "";
 }
 
+// Eventlistner for Post- button
 function requestAddAnimal() {
   const searchButton = document.querySelector("#add-btn");
   searchButton.addEventListener("click", addOneAnimal);
 }
 
+// Posts new object in to animalDb.json and GET request
 async function addOneAnimal() {
   const animalName = document.querySelector("#addName").value;
   const animalSpecies = document.querySelector("#addSpecies").value;
@@ -66,21 +73,24 @@ async function addOneAnimal() {
       body: JSON.stringify({
         name: animalName,
         animalType: animalSpecies,
-        otherInfo: animalOtherInfo,
+        otherInfo: animalOtherInfo
       }),
     });
     document.querySelector("#addName").value = "";
     document.querySelector("#addSpecies").value = "";
     document.querySelector("#addOther").value = "";
+    alert('Djuret har nu lagts till');
     await fetchAnimals();
   }
 }
 
+// Eventlistner for DELETE- button
 function requestDeleteAnimal() {
   const searchButton = document.querySelector("#delete-btn");
   searchButton.addEventListener("click", deleteOneAnimal);
 }
 
+// delete animal by id and a GET request
 async function deleteOneAnimal() {
   const animalId = document.querySelector("#deleteAnimal").value;
   const res = await fetch(`api/animals/${animalId}`);
@@ -98,11 +108,13 @@ async function deleteOneAnimal() {
   await fetchAnimals();
 }
 
+// Eventlistner for PUT- button
 function requestEditAnimal() {
   const searchButton = document.querySelector("#edit-btn");
   searchButton.addEventListener("click", editOneAnimal);
 }
 
+//fetch one json object by id and PUT request 
 async function editOneAnimal() {
   const animalId = document.querySelector("#editWithId").value;
   const res = await fetch(`api/animals/${animalId}`);
@@ -135,6 +147,7 @@ async function editOneAnimal() {
   }
 }
 
+//fetch one json object by chosen id
 async function fetchOneAnimalById(id) {
   const div = document.querySelector("#animal-box");
   div.innerHTML = "";

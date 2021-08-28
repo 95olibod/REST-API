@@ -10,9 +10,9 @@ POST http://localhost:3000/api/animals
 Content-Type: application/json
 
 {
-    "name": "Tore",
-    "animalType": "Tiger",
-    "otherInfo": "10 år"
+    "name": "Perry",
+    "animalType": "Blötdjur",
+    "otherInfo": "grön, med hatt"
     
 }
 
@@ -23,14 +23,14 @@ DELETE http://localhost:3000/api/animals/7ee853f0-073c-11ec-9431-bb2083057d40
 
 ###
 
-PUT http://localhost:3000/api/animals/68a017f0-073b-11ec-81d0-fbbdf3c4c3e3
+PUT http://localhost:3000/api/animals/f40c32e0-0724-11ec-8692-c7858ea91625
 Content-Type: application/json
 
 {
     
-    "name": "Ture",
-    "animalType": "Tiger",
-    "otherInfo": ""
+    "name": "Katja",
+    "animalType": "Katt",
+    "otherInfo": "rymmer ofta"
 }
 
 
