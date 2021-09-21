@@ -14,7 +14,7 @@
     {
         "name": "Katja",
         "animalType": "Katt",
-        "otherInfo": "svart med vita fläckar",
+        "otherInfo": "rymmer ofta",
         "id": "f40c32e0-0724-11ec-8692-c7858ea91625"
     },
     {
@@ -58,5 +58,11 @@
         "animalType": "Säl",
         "otherInfo": "Hal som en ål",
         "id": "565c0000-07f3-11ec-9a11-c734558df2a6"
+    },
+    {
+        "name": "edda",
+        "animalType": "groda",
+        "otherInfo": "grön",
+        "id": "20fb8630-1acf-11ec-81cc-f1aa9053f257"
     }
 ]

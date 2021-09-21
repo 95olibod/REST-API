@@ -88,9 +88,10 @@ function updateAnimal(req, res, next) {
     animal.otherInfo = updatedAnimal.otherInfo;
   }
 
-  if (!animal) {
+  if (updatedAnimal.id !== id) {
     res.status(404).json(`animal with id ${id} could not be found `);
-  } else {
+  }
+  else {
     const clone = [...animals];
     clone[animalIndex] = animal;
     animals = clone;
