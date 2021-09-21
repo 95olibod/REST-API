@@ -28,7 +28,7 @@ Content-Type: application/json
 
 {
     
-    "name": "Katja",
+    "name": "Kaja",
     "animalType": "Katt",
     "otherInfo": "rymmer ofta"
 }

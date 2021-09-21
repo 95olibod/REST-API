@@ -80,7 +80,6 @@ async function addOneAnimal() {
     document.querySelector("#addSpecies").value = "";
     document.querySelector("#addOther").value = "";
     alert('Djuret har nu lagts till');
-    await fetchAnimals();
   }
 }
 
@@ -105,7 +104,6 @@ async function deleteOneAnimal() {
     );
   }
   document.querySelector("#deleteAnimal").value = "";
-  await fetchAnimals();
 }
 
 // Eventlistner for PUT- button

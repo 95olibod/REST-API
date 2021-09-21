@@ -1,18 +1,12 @@
 [
     {
-        "name": "Sture",
-        "animalType": "Struts",
-        "otherInfo": "176 cm lång",
-        "id": "ccd19a10-071c-11ec-97af-f3a328a84f14"
-    },
-    {
         "name": "Sonja",
         "animalType": "Zebra",
         "otherInfo": "blå",
         "id": "c0505960-071d-11ec-8d60-c1cda362be7b"
     },
     {
-        "name": "Katja",
+        "name": "Kaja",
         "animalType": "Katt",
         "otherInfo": "rymmer ofta",
         "id": "f40c32e0-0724-11ec-8692-c7858ea91625"
@@ -64,5 +58,107 @@
         "animalType": "groda",
         "otherInfo": "grön",
         "id": "20fb8630-1acf-11ec-81cc-f1aa9053f257"
+    },
+    {
+        "name": "f",
+        "animalType": "f",
+        "otherInfo": "f",
+        "id": "c141f670-1ad3-11ec-bf97-156a24cf0116"
+    },
+    {
+        "name": "r",
+        "animalType": "r",
+        "otherInfo": "r",
+        "id": "72ef5840-1ad4-11ec-9067-3dc6c3698f00"
+    },
+    {
+        "name": "Perry",
+        "animalType": "Blötdjur",
+        "otherInfo": "grön, med hatt",
+        "id": "7fe3d7b0-1ad4-11ec-8943-e34e5e04cfb7"
+    },
+    {
+        "name": "h",
+        "animalType": "h",
+        "otherInfo": "h",
+        "id": "8c0cf0d0-1ad4-11ec-b86f-5171ca6210b8"
+    },
+    {
+        "name": "r",
+        "animalType": "r",
+        "otherInfo": "r",
+        "id": "b9234c90-1ad4-11ec-80ca-9f4a031e3d8d"
+    },
+    {
+        "name": "i",
+        "animalType": "i",
+        "otherInfo": "i",
+        "id": "c15b7c70-1ad4-11ec-aae8-7fb35d62e2fe"
+    },
+    {
+        "name": "t",
+        "animalType": "t",
+        "otherInfo": "t",
+        "id": "ce23e2d0-1ad4-11ec-bcb3-6d6d96bf9f30"
+    },
+    {
+        "name": "r",
+        "animalType": "r",
+        "otherInfo": "r",
+        "id": "e5ad94f0-1ad4-11ec-b39d-91301fdc9da8"
+    },
+    {
+        "name": "t",
+        "animalType": "t",
+        "otherInfo": "t",
+        "id": "f5729980-1ad4-11ec-9f34-f501870d14a8"
+    },
+    {
+        "name": "5",
+        "animalType": "5",
+        "otherInfo": "5",
+        "id": "1a20b4b0-1ad5-11ec-a383-37c1c6dfbafb"
+    },
+    {
+        "name": "l",
+        "animalType": "l",
+        "otherInfo": "l",
+        "id": "1e5361e0-1ad5-11ec-ba2e-7dc0de62161f"
+    },
+    {
+        "name": "t",
+        "animalType": "t",
+        "otherInfo": "t",
+        "id": "2444af00-1ad5-11ec-86c2-e5a493f9b6b5"
+    },
+    {
+        "name": "t",
+        "animalType": "t",
+        "otherInfo": "t",
+        "id": "2522b2f0-1ad5-11ec-86c2-e5a493f9b6b5"
+    },
+    {
+        "name": "t",
+        "animalType": "t",
+        "otherInfo": "t",
+        "id": "258e4600-1ad5-11ec-b248-47335f26c9dc"
+    },
+    {
+        "name": "t",
+        "animalType": "t",
+        "otherInfo": "t",
+        "id": "258e9420-1ad5-11ec-b248-47335f26c9dc"
+    },
+    {
+        "name": "g",
+        "animalType": "g",
+        "otherInfo": "g",
+        "id": "2b016270-1ad5-11ec-833d-c149a6ab90d8"
+    },
+    {
+        "name": "Perry",
+        "animalType": "Blötdjur",
+        "otherInfo": "grön, med hatt",
+        "id": "ec772430-1ad5-11ec-b719-394145ceba08"
     }
 ]
