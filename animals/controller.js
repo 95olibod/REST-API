@@ -77,20 +77,21 @@ function updateAnimal(req, res, next) {
   const animal = animals.find((animal) => animal.id == id);
   const animalIndex = animals.findIndex((animal) => animal.id == id);
   const updatedAnimal = { ...req.body, id: id };
-
-  if (req.body.name) {
-    animal.name = updatedAnimal.name;
-  }
-  if (req.body.animalType) {
-    animal.animalType = updatedAnimal.animalType;
-  }
-  if (req.body.otherInfo) {
-    animal.otherInfo = updatedAnimal.otherInfo;
-  }
-
+  
   if (!animal) {
     res.status(404).json(`animal with id ${id} could not be found `);
   }else {
+
+    if (req.body.name) {
+      animal.name = updatedAnimal.name;
+    }
+    if (req.body.animalType) {
+      animal.animalType = updatedAnimal.animalType;
+    }
+    if (req.body.otherInfo) {
+      animal.otherInfo = updatedAnimal.otherInfo;
+    }
+
     const clone = [...animals];
     clone[animalIndex] = animal;
     animals = clone;
