@@ -33,7 +33,7 @@ function getOneAnimal(req, res, next) {
     res.status(200).json(animal);
   }
 }
-
+ 
 /**
  * Add animal oject to file-db and responds whith all
  * @param {Request} req
@@ -61,7 +61,7 @@ function addAnimal(req, res, next) {
           }
         }
       );
-      res.json(jsonFileData);
+      res.json(animals.slice(-1).pop());
     }
   });
 }
@@ -130,7 +130,8 @@ function deleteAnimal(req, res, next) {
         }
       }
     );
-    res.status(200).json(updatedAnimals);
+    // res.status(204);
+    res.status(200).json("Djuret borttaget");
   }
 }
 

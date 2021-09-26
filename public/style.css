@@ -124,6 +124,18 @@ header {
     margin: 0 4em;
 }
 
+/* extra styles for edit div */
+
+.hide-edit-field {
+    display: none;
+}
+
+
+.id-text {
+    font-size: 12px;
+    height: 1rem;
+}
+
 /* media */
 
 @media (max-width: 1200px) {

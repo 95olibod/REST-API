@@ -46,9 +46,9 @@ Jag har även skapat ett simplet klient-gränssnitt där mina endpoints kan anro
 - Alla objekt får vi tillbaka som json.
 - Get (knappen Se alla djur) - VI FÅR TILLBAKA: alla json objekt som finns sparade i animalDb.json.
 - Get/id (knappen Sök, med tillhörande inputfält)- VI FÅR TILLBAKA: Ett json objekt om id matchar existerande från animalDb.json.
-- Post (knappen Lägg till, med tillhörande inputfält) - VI FÅR TILLBAKA: alla json objekt inklusive det nya objektet.
-- Delete (knappen Ta bort, med tillhörande inputfält) - VI FÅR TILLBAKA: alla json objekt exklusive det borttagna objektet.
-- Put (knappen Spara, med tillhörande inputfält) - VI FÅR TILLBAKA: ett json objekt där de fält som fyllts i redigeras, lämnas fält tomma kommer det tidigare värdet att gälla.
+- Post (knappen Lägg till, med tillhörande inputfält) - VI FÅR TILLBAKA: det nya objektet.
+- Delete (knappen Ta bort, med tillhörande inputfält) - VI FÅR TILLBAKA: -.
+- Put - i gränssnittet krävs det att du sökt på ett id för att kunna redigera ett djur. Efter sök kommer gömd div fram(knappen Spara, med tillhörande inputfält, knapp Avbryt för att gömma div med edit) - VI FÅR TILLBAKA: json data, vilkett är ett eget val för detta gränssnitt, lämnas fält tomma kommer det tidigare värdet att gälla.
 
 
 ### På grund av tidsbrist för inlämningen har jag: ###

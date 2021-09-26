@@ -25,9 +25,31 @@
             type="text"
             id="getOneAnimalFromId"
             name="getOneAnimalFromId"
+            class="id-text" 
           />
           <input type="submit" value="Sök" id="search-btn" />
         </div>
+
+        <div id="edit-field" class="flex column margin-l margin-r hide-edit-field">
+          <p>Redigera ett djur</p>
+          <br />
+          <label for="editWithId">ID nummer: </label>
+          <input type="text" id="editWithId" name="editWithId" disabled="disabled" class="id-text" />
+          <label for="addNewName">Namn: </label>
+          <input type="text" id="addNewName" name="addNewName" />
+          <label for="addNewSpecies">Art: </label>
+          <input type="text" id="addNewSpecies" name="addNewSpecies" />
+          <label for="addNewOther">Annan info: </label>
+          <input type="text" id="addNewOther" name="addNewOther" />
+        <div>
+          <input type="submit" value="Spara" id="edit-btn" />
+          <!-- <input type="submit" value="Avbryt" id="cancel-edit-btn" /> -->
+          <button id="cancel-edit-btn">Avbryt</button>
+
+        </div>
+        </div>
+
+
         <div class="flex column margin-l margin-r">
           <p>Lägg till ett djur</p>
           <br />
@@ -42,23 +64,11 @@
         <div class="flex column margin-l margin-r">
           <p>Ta bort ett djur</p>
           <br />
-          <label for="deleteAnimal">ID: </label>
-          <input type="text" id="deleteAnimal" name="deleteAnimal" />
+          <label for="deleteAnimal">ID nummer: </label>
+          <input type="text" id="deleteAnimal" name="deleteAnimal" class="id-text" />
           <input type="submit" value="Ta bort" id="delete-btn" />
         </div>
-        <div class="flex column margin-l margin-r">
-          <p>Redigera ett djur</p>
-          <br />
-          <label for="editWithId">ID: </label>
-          <input type="text" id="editWithId" name="editWithId" />
-          <label for="addNewName">Namn: </label>
-          <input type="text" id="addNewName" name="addNewName" />
-          <label for="addNewSpecies">Art: </label>
-          <input type="text" id="addNewSpecies" name="addNewSpecies" />
-          <label for="addNewOther">Annan info: </label>
-          <input type="text" id="addNewOther" name="addNewOther" />
-          <input type="submit" value="Spara" id="edit-btn" />
-        </div>
+        
       </div>
     </div>
 
