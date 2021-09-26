@@ -33,7 +33,7 @@ function getOneAnimal(req, res, next) {
     res.status(200).json(animal);
   }
 }
-
+ 
 /**
  * Add animal oject to file-db and responds whith all
  * @param {Request} req
@@ -61,7 +61,7 @@ function addAnimal(req, res, next) {
           }
         }
       );
-      res.json(jsonFileData);
+      res.json(animals.slice(-1).pop());
     }
   });
 }
@@ -77,21 +77,21 @@ function updateAnimal(req, res, next) {
   const animal = animals.find((animal) => animal.id == id);
   const animalIndex = animals.findIndex((animal) => animal.id == id);
   const updatedAnimal = { ...req.body, id: id };
-
-  if (req.body.name) {
-    animal.name = updatedAnimal.name;
-  }
-  if (req.body.animalType) {
-    animal.animalType = updatedAnimal.animalType;
-  }
-  if (req.body.otherInfo) {
-    animal.otherInfo = updatedAnimal.otherInfo;
-  }
-
-  if (updatedAnimal.id !== id) {
+  
+  if (!animal) {
     res.status(404).json(`animal with id ${id} could not be found `);
-  }
-  else {
+  }else {
+
+    if (req.body.name) {
+      animal.name = updatedAnimal.name;
+    }
+    if (req.body.animalType) {
+      animal.animalType = updatedAnimal.animalType;
+    }
+    if (req.body.otherInfo) {
+      animal.otherInfo = updatedAnimal.otherInfo;
+    }
+
     const clone = [...animals];
     clone[animalIndex] = animal;
     animals = clone;
@@ -104,7 +104,7 @@ function updateAnimal(req, res, next) {
         }
       }
     );
-    res.json(animals);
+    res.status(200).json(animal);
   }
 }
 
@@ -130,7 +130,8 @@ function deleteAnimal(req, res, next) {
         }
       }
     );
-    res.status(200).json(updatedAnimals);
+    // res.status(204);
+    res.status(200).json("Djuret borttaget");
   }
 }
 

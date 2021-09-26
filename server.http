@@ -18,19 +18,19 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/api/animals/7ee853f0-073c-11ec-9431-bb2083057d40
+DELETE http://localhost:3000/api/animals/b6a89990-1efb-11ec-82cd-43c8fc564042
 
 
 ###
 
-PUT http://localhost:3000/api/animals/f40c32e0-0724-11ec-8692-c7858ea91625
+PUT http://localhost:3000/api/animals/ec772430-1ad5-11ec-b719-394145ceba08
 Content-Type: application/json
 
 {
     
-    "name": "Katja",
-    "animalType": "Katt",
-    "otherInfo": "rymmer ofta"
+    "name": "Perry",
+    "animalType": "Blötdjur",
+    "otherInfo": "grön, med hatt"
 }
 
 

@@ -1,21 +1,9 @@
 [
     {
-        "name": "Sture",
-        "animalType": "Struts",
-        "otherInfo": "176 cm lång",
-        "id": "ccd19a10-071c-11ec-97af-f3a328a84f14"
-    },
-    {
         "name": "Sonja",
         "animalType": "Zebra",
-        "otherInfo": "blå",
+        "otherInfo": "Randig",
         "id": "c0505960-071d-11ec-8d60-c1cda362be7b"
-    },
-    {
-        "name": "Katja",
-        "animalType": "Katt",
-        "otherInfo": "rymmer ofta",
-        "id": "f40c32e0-0724-11ec-8692-c7858ea91625"
     },
     {
         "name": "Leonardo",
@@ -60,9 +48,21 @@
         "id": "565c0000-07f3-11ec-9a11-c734558df2a6"
     },
     {
-        "name": "edda",
-        "animalType": "groda",
-        "otherInfo": "grön",
-        "id": "20fb8630-1acf-11ec-81cc-f1aa9053f257"
+        "name": "Perry",
+        "animalType": "Blötdjur",
+        "otherInfo": "grön, med hatt",
+        "id": "ec772430-1ad5-11ec-b719-394145ceba08"
+    },
+    {
+        "name": "Gurkan",
+        "animalType": "Häst",
+        "otherInfo": "Finns inte",
+        "id": "1564eb50-1efc-11ec-935a-e54f5d27c56b"
+    },
+    {
+        "name": "Perry",
+        "animalType": "Blötdjur",
+        "otherInfo": "Grön, med hatt",
+        "id": "46ac5120-1efd-11ec-94da-ef422b8fac69"
     }
 ]
